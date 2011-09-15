@@ -1,4 +1,4 @@
-nmap <F6> :call Run('perl')<CR>
+nmap <F5> :call Run(&ft)<CR>
 cabbrev pyx call Run('python')
 cabbrev perlx call Run('perl')
 cabbrev rubyx call Run('ruby')

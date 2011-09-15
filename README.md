@@ -17,10 +17,15 @@ inside your ~/.vim/bundle folder
 
 # Usage
 
-In normal mode you can hit F5 to run a perl script.
+In normal mode you can just hit F5.
 
 In command line mode, you can run the following commands.
 
     :perlx
     :pyx
     :rubyx
+
+# Contributors 
+
+* Magnus Woldrich [trapd00r](https://github.com/trapd00r)
+
