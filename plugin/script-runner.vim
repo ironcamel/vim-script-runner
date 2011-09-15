@@ -19,7 +19,7 @@ fu! Run()
     if(has_key(s:ft_cmd, s:filetype))
         only
         %y
-        call NewThrowawayBuffer
+        call NewThrowawayBuffer()
         wincmd J
         resize 15
         put
