@@ -27,9 +27,7 @@ In normal mode you can just hit F5.
 
 In command line mode, you can run the following commands.
 
-    :perlx
-    :pyx
-    :rubyx
+    :sx
 
 # Contributors 
 
