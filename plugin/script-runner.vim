@@ -21,7 +21,7 @@ fu! Run(cmd)
     call NewThrowawayBuffer()
     wincmd J
     resize 15
-    put
+    0 put
     exe "%!" . a:cmd
     0 read !date
     append
