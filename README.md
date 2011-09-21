@@ -22,6 +22,7 @@ inside your ~/.vim/bundle folder
 # Usage
 
 normal mode: F5
+
 command mode: :sx
 
 # Contributors 
