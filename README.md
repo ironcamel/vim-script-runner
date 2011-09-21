@@ -17,7 +17,7 @@ inside your ~/.vim/bundle folder
 
 ## Manual Install
 
-    cp plugin/script-runner.vim ~/.vim/plugins
+    cp plugin/script-runner.vim ~/.vim/plugin
 
 # Usage
 
