@@ -6,30 +6,23 @@ the results in a split window at the bottom.
 
 # Installation
 
-There are multiple ways you can install this.
-
-## Pathogen
+## Pathogen Install
 
 If you have the pathogen plugin installed, you can just clone this project
 inside your ~/.vim/bundle folder
 
-## Install Script
+## Script Install
 
     bash install.sh
 
-## Manual
+## Manual Install
 
     cp plugin/script-runner.vim ~/.vim/plugins
 
 # Usage
 
-In normal mode you can just hit F5.
-
-In command line mode, you can run the following commands.
-
-    :perlx
-    :pyx
-    :rubyx
+normal mode: F5
+command mode: :sx
 
 # Contributors 
 
