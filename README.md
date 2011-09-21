@@ -1,7 +1,7 @@
 # About
 
 script-runner is a vim plugin that lets you easily and quickly run a perl,
-python, ruby, etc. script. Just hit F5 and it runs your script and outputs
+python, ruby, bash, etc. script. Just hit F5 and it runs your script and outputs
 the results in a split window at the bottom.
 
 # Installation
