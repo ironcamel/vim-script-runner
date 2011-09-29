@@ -31,15 +31,15 @@ If you want to change the default key mapping of F5, add this to your .vimrc:
 
     let g:script_runner_key = '<F6>'
 
-You can run custom command based on the type of script you are working on.
+You can run a custom command based on the type of script you are working on.
 For example, if you want the Data::Dump module available each time you run
-a perl script, you add this to your .vimrc:
+a perl script, add this to your .vimrc:
 
     let g:script_runner_perl = 'perl -MData::Dump'
 
-If you want to run python3 instead of python:
+To run a specific version of ruby:
 
-    let g:script_runner_python = 'python3'
+    let g:script_runner_ruby = '/usr/local/bin/ruby1.9'
 
 # Contributors 
 
