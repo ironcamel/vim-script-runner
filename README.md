@@ -29,4 +29,4 @@ command mode: :sx
 
 * Magnus Woldrich [trapd00r](https://github.com/trapd00r)
 * Naveed Massjouni [ironcamel](https://github.com/ironcamel) (author)
-
+* William Wolf [throughnothing](https://github.com/throughnothing)
