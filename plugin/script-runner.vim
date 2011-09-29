@@ -13,6 +13,7 @@ fu! NewThrowawayBuffer()
     setlocal noswapfile
     setlocal buftype=nowrite
     setlocal bufhidden=delete
+    map <buffer> q :quit<CR>
 endf
 
 fu! Run(cmd)
