@@ -3,7 +3,7 @@
 " Version: 0.0.1
 
 let s:ft_cmd = {
-    \'json' : 'json_verify',
+    \'json' : 'json_pp',
 \}
 
 if !exists('g:script_runner_map')
