@@ -2,7 +2,7 @@
 " Maintainer: Naveed Massjouni <https://github.com/ironcamel/vim-script-runner>
 " Version: 0.0.1
 
-nmap <F5> :call Run(&ft)<CR>
+noremap <F5> :call Run(&ft)<CR>
 cabbrev sx call Run(&ft)
 cabbrev pyx call Run('python')
 cabbrev perlx call Run('perl')
