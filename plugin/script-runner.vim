@@ -2,10 +2,10 @@
 " Maintainer: Naveed Massjouni <https://github.com/ironcamel/vim-script-runner>
 " Version: 0.0.1
 
-if !exists('g:script_runner_map')
-    let g:script_runner_map = '<F5>'
+if !exists('g:script_runner_key')
+    let g:script_runner_key = '<F5>'
 endif
-execute "nnoremap ".g:script_runner_map." :call Run(&ft)<CR>"
+execute "nnoremap ".g:script_runner_key." :call Run(&ft)<CR>"
 cabbrev sx call Run(&ft)
 cabbrev pyx call Run('python')
 cabbrev perlx call Run('perl')

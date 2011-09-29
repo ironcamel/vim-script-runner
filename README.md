@@ -29,7 +29,7 @@ command mode: :sx
 
 If you want to change the default key mapping of F5, add this to your .vimrc:
 
-    let g:script_runner_map = '<F6>'
+    let g:script_runner_key = '<F6>'
 
 You can run custom command based on the type of script you are working on.
 For example, if you want the Data::Dump module available each time you run
