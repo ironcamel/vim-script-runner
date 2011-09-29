@@ -28,15 +28,9 @@ endf
 fu! Run(cmd)
     let s:real_cmd = a:cmd
 
-<<<<<<< HEAD
-    if(exists("g:script_runner_cmds") && has_key(g:script_runner_cmds, a:cmd))
+    if(exists("g:script_runner_".a:cmd))
         " Use the users custom setting
-        "let s:real_cmd = g:script_runner_".a:cmd
-=======
-    if(exists("g:ft_".a:cmd))
-        " Use the users custom setting
-        execute "let s:real_cmd = g:ft_".a:cmd
->>>>>>> allow user overrides with g:ft_FILETYPE vars
+        execute "let s:real_cmd = g:script_runner_".a:cmd
     elseif(has_key(s:ft_cmd, a:cmd))
         " Use our default, if there is one
         let s:real_cmd = s:ft_cmd[a:cmd]
