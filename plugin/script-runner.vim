@@ -2,15 +2,15 @@
 " Maintainer: Naveed Massjouni <https://github.com/ironcamel/vim-script-runner>
 " Version: 0.0.1
 
-let s:ft_cmd = {
-    \'json' : 'json_pp',
-\}
-
 if !exists('g:script_runner_map')
     let g:script_runner_map = '<F5>'
 endif
-
 execute "nnoremap ".g:script_runner_map." :call Run(&ft)<CR>"
+
+let s:ft_cmd = {
+    \'json' : 'json_pp',
+\}
+autocmd BufEnter *.json set ft=json
 
 cabbrev sx call Run(&ft)
 cabbrev pyx call Run('python')
