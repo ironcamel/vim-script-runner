@@ -41,6 +41,17 @@ To run a specific version of ruby:
 
     let g:script_runner_ruby = '/usr/local/bin/ruby1.9'
 
+Currently, script-runner will format xml and json file types.
+You must have xmllint and JSON::PP installed.
+On a debian based system, you can install those via:
+
+    sudo apt-get install libxml2-utils
+    sudo cpan JSON::PP
+
+For json support, you may need to add the following to your .vimrc.
+
+    autocmd BufEnter *.json set ft=json
+
 # Contributors 
 
 * Magnus Woldrich [trapd00r](https://github.com/trapd00r)
