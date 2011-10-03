@@ -13,7 +13,7 @@ cabbrev rubyx call Run('ruby')
 
 let s:ft_cmd = {
     \'json' : 'json_pp',
-    \'xml'  : 'xmllint - --format',
+    \'xml'  : 'xmllint --format -',
 \}
 
 autocmd BufEnter *.json set ft=json
