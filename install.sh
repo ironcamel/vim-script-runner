@@ -1,3 +1,3 @@
 #!/bin/bash
-mkdir -p ~/.vim/plugins
+mkdir -p ~/.vim/plugin
 cp plugin/script-runner.vim ~/.vim/plugin
