@@ -5,11 +5,12 @@
 if !exists('g:script_runner_key')
     let g:script_runner_key = '<F5>'
 endif
-execute "nnoremap ".g:script_runner_key." :call Run(&ft)<CR>"
+execute "nnoremap <silent> ".g:script_runner_key." :silent call Run(&ft)<CR>"
 cabbrev sx call Run(&ft)
 cabbrev pyx call Run('python')
 cabbrev perlx call Run('perl')
 cabbrev rubyx call Run('ruby')
+cabbrev phpx call Run('php')
 
 let s:ft_cmd = {
     \'json' : 'json_pp',
@@ -20,14 +21,31 @@ autocmd BufEnter *.json set ft=json
 
 fu! NewThrowawayBuffer()
     new
+    setlocal noreadonly
+    setlocal modifiable
+    " setlocal nonumber
+    " setlocal cursorline
+    setlocal filetype=runner
+    setlocal nobuflisted
+    setlocal buftype=nofile
+    setlocal bufhidden=hide
     setlocal noswapfile
-    setlocal buftype=nowrite
-    setlocal bufhidden=delete
-    map <buffer> q :quit<CR>
+    setlocal nolist
+    setlocal nospell
+    setlocal nowrap
+    setlocal nofoldenable
+    setlocal foldcolumn=1
+    map <buffer> <silent> q :quit<CR>
+    " redraw!
 endf
 
 fu! Run(cmd)
-    let s:real_cmd = a:cmd
+    " change pwd
+    let s:pwd = getcwd()
+    exe 'cd %:p:h'
+
+    " let s:real_cmd = a:cmd
+    let s:real_cmd = substitute(a:cmd, '.laravel', '', '') 
 
     if(exists("g:script_runner_".a:cmd))
         " Use the users custom setting
@@ -41,12 +59,16 @@ fu! Run(cmd)
     %y
     call NewThrowawayBuffer()
     wincmd J
-    resize 15
+    resize 12
     0 put
     exe '%!' . s:real_cmd
     0 read !date
     append
-----------------------------
+------------------------------------
 .
+    setlocal readonly
+    setlocal nomodifiable
     wincmd w
+    " recover pwd
+    exe 'cd ' . s:pwd
 endf
