@@ -18,7 +18,7 @@ execute "nnoremap <silent> ".g:script_runner_key." :silent call Run(&ft)<CR>"
 execute "inoremap <silent> ".g:script_runner_key." <Esc>:silent call Run(&ft)<CR>"
 " }}}
 cabbrev sx call Run(&ft)
-cabbrev sh call Run('sh')
+cabbrev sh call Run('bash')
 cabbrev pyx call Run('python')
 cabbrev perlx call Run('perl')
 cabbrev rubyx call Run('ruby')
