@@ -80,7 +80,7 @@ fu! Run(cmd)
     resize 12
     " }}}
     0 put
-    exe '%!' . s:real_cmd
+    exe '%!' . s:real_cmd . '; echo -e "------------------------------------\nScript exited with code: $?"'
     0 read !date
     append
 ------------------------------------
